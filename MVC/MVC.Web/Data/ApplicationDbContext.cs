@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using MVC.Web.DTO;
 using MVC.Web.Models;
 
 namespace MVC.Web.Data
@@ -14,6 +15,9 @@ namespace MVC.Web.Data
             : base(options)
         {
         }
+
+        public DbSet<Staff> Staffs { get; set; }
+        public DbSet<Address> Addresses { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
