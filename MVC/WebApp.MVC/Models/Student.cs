@@ -11,9 +11,9 @@ namespace WebApp.MVC.Models
         public Name Name { get; set; }  
         public Address Address { get; set; }
         public Contact Contact { get; set; }    
+        public List<Courses> Courseses { get; set; }    
     }
-
-
+    
     public class Name   
     {
         public string FirstName { get; set; }
@@ -30,5 +30,12 @@ namespace WebApp.MVC.Models
     {
         public string Mobile { get; set; }
         public string Phone { get; set; }
+    }
+
+    public class Courses
+    {
+        public int Id { get; set; }
+        public string Code { get; set; }
+        public string CourseName { get; set; }
     }
 }
